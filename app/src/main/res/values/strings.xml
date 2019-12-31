@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Dial Assistant</string>
+    <string name="author">Mystic-Mirage, 2019</string>
+    <string name="dial_number_label">Number to deal</string>
+    <string name="done_number_btn">Done</string>
+    <string name="edit_number_btn">Edit</string>
+    <string name="play_sound">Play sound before dialing</string>
+    <string name="grant_permissions_txt">Need a permission to make phone calls.\nPush button bellow to grant it</string>
+    <string name="grant_permissions_btn">Grant</string>
+    <string name="grant_permissions_xiaomi_txt">Xiaomi users need to enable\n\"Show on Lock screen\"\nto dial when the device is locked</string>
+    <string name="set_default_txt">Configure \"Dial Assistant\" as a default\nVoice Command handler</string>
+    <string name="set_default_btn">Choose default</string>
+</resources>
