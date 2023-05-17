@@ -14,9 +14,9 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.Switch;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout grantPermissionsLayoutXiaomi;
     private EditText phoneNumber;
     private Preferences preferences;
-    private Switch playSound;
+    private SwitchCompat playSound;
     private DefaultChooser defaultChooser;
     private final Globals globals = Globals.getInstance();
 
