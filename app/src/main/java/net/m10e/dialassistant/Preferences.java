@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
 class Preferences {
-    private SharedPreferences preferences;
+    private final SharedPreferences preferences;
     static final String PHONE_NUMBER = "phone_number";
     static final String PLAY_SOUND = "play_sound";
 

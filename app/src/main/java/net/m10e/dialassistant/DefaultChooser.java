@@ -7,10 +7,10 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 
 class DefaultChooser {
-    private Context context;
-    private ComponentName componentName;
-    private String packageName;
-    private PackageManager packageManager;
+    private final Context context;
+    private final ComponentName componentName;
+    private final String packageName;
+    private final PackageManager packageManager;
     private static final Intent intent = new Intent(Intent.ACTION_VOICE_COMMAND);
 
     DefaultChooser(Context context) {

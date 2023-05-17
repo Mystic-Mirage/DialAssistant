@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private Preferences preferences;
     private Switch playSound;
     private DefaultChooser defaultChooser;
-    private Globals globals = Globals.getInstance();
+    private final Globals globals = Globals.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
