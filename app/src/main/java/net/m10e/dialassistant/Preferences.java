@@ -13,23 +13,23 @@ class Preferences {
         preferences = PreferenceManager.getDefaultSharedPreferences(context);
     }
 
-    boolean getBoolean(String key, boolean defValue) {
-        return preferences.getBoolean(key, defValue);
+    boolean getPlaySound() {
+        return preferences.getBoolean(Preferences.PLAY_SOUND, true);
     }
 
-    String getString(String key, String defValue) {
-        return preferences.getString(key, defValue);
+    String getPhoneNumber() {
+        return preferences.getString(Preferences.PHONE_NUMBER, "");
     }
 
-    void putBoolean(String name, Boolean value) {
+    void setPlaySound(Boolean value) {
         SharedPreferences.Editor editor = preferences.edit();
-        editor.putBoolean(name, value);
+        editor.putBoolean(Preferences.PLAY_SOUND, value);
         editor.apply();
     }
 
-    void putString(String name, String value) {
+    void setPhoneNumber(String value) {
         SharedPreferences.Editor editor = preferences.edit();
-        editor.putString(name, value);
+        editor.putString(Preferences.PHONE_NUMBER, value);
         editor.apply();
     }
 }

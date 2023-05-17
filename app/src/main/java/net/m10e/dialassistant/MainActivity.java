@@ -42,10 +42,10 @@ public class MainActivity extends AppCompatActivity {
         grantPermissionsLayoutXiaomi = findViewById(R.id.grant_permissions_xiaomi);
 
         phoneNumber = findViewById(R.id.phone_number);
-        phoneNumber.setText(preferences.getString(Preferences.PHONE_NUMBER, ""));
+        phoneNumber.setText(preferences.getPhoneNumber());
 
         playSound = findViewById(R.id.play_sound);
-        playSound.setChecked(preferences.getBoolean(Preferences.PLAY_SOUND, true));
+        playSound.setChecked(preferences.getPlaySound());
 
         defaultChooser = new DefaultChooser(this);
 
@@ -144,13 +144,13 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                preferences.putString(Preferences.PHONE_NUMBER, s.toString());
+                preferences.setPhoneNumber(s.toString());
             }
         });
     }
 
     public void onClickPlaySound(View v) {
-        preferences.putBoolean(Preferences.PLAY_SOUND, playSound.isChecked());
+        preferences.setPlaySound(playSound.isChecked());
     }
 
     public void onClickVendor(View v) {

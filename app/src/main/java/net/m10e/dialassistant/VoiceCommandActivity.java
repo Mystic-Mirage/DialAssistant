@@ -48,11 +48,11 @@ public class VoiceCommandActivity extends Activity {
     }
 
     private String getNumber() {
-        return preferences.getString(Preferences.PHONE_NUMBER, "");
+        return preferences.getPhoneNumber();
     }
 
     private void playSound(int tone) {
-        if (preferences.getBoolean(Preferences.PLAY_SOUND, true)) {
+        if (preferences.getPlaySound()) {
             ToneGenerator toneGen = new ToneGenerator(AudioManager.STREAM_MUSIC, 100);
             toneGen.startTone(tone, 400);
             SystemClock.sleep(1000);
