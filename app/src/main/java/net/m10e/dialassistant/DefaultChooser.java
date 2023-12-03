@@ -1,3 +1,5 @@
+//https://stackoverflow.com/a/23374389
+
 package net.m10e.dialassistant;
 
 import android.content.ComponentName;
@@ -22,7 +24,10 @@ class DefaultChooser {
 
     private String getDefault() {
         ResolveInfo rInfo = packageManager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY);
-        return rInfo.activityInfo.packageName;
+        if (rInfo != null) {
+            return rInfo.activityInfo.packageName;
+        }
+        return "";
     }
 
     boolean isDefault() {
